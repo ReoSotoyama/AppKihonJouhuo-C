@@ -101,7 +101,31 @@ public class Main {
 		// 回答番号
 		int answer = 0;
 
-		return answer;
+		String[] kaitouList = new String[] { "委託先から定期的に受領している業務報告及びその検証結果を示している資料", "成果物の検収方法を明確にしている資料" };
+
+		// 質問内容を表示
+		System.out.println("問5");
+		System.out.println("システム開発を外部委託している部門が，委託先に対する進捗管理についてシステム監査を受ける場合，提出すべき資料はどれか。");
+
+		// 解答欄を表示
+		for (int i = 0; i < kaitouList.length; i++) {
+			System.out.println("" + i + ":" + kaitouList[i]);
+		}
+
+		// ユーザーが答えを入力
+		System.out.println("回答：");
+		answer = Integer.valueOf(scan.next());
+
+		// 回答結果を出力
+		System.out.println("「" + kaitouList[answer] + "」が選択されました。");
+		if(answer == 0){
+			System.out.print("正解！！");
+			return 20;
+		}
+		else{
+			System.out.print("不正解！！");
+			return 0;
+		}
 	}
 
 	/**
