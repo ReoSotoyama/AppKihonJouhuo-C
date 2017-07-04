@@ -74,10 +74,35 @@ public class Main {
 	 * @return
 	 */
 	public static int toi3() {
-		// 回答番号
-		int answer = 0;
+		int ans = 0;
+		Scanner sc = new Scanner(System.in);
+		String[] s = {"排他的論理和(XOR)" , "否定論理積(NAND)" , "論理積(AND)" , "論理和(OR)"};
+		System.out.println("問1");
+		System.out.println("次に示す手順は，列中の少なくとも一つは1であるビット列が与えられたとき，最も右にある1を残し，");
+		System.out.println("ほかのビットをすべて0にするアルゴリズムである。例えば，00101000が与えられたとき，00001000が求まる。aに入る論理演算はどれか。");
+		System.out.println("手順1  与えられたビット列Aを符号なしの2進数と見なし，Aから1を引き，結果をBとする。");
+		System.out.println("手順2  AとBの排他的論理和(XOR)を求め，結果をCとする。");
+		System.out.println("手順3  AとCのaを求め，結果をAとする。");
 
-		return answer;
+		for(int i = 0; i < s.length; i++){
+			System.out.println((i+1) + "." + s[i]);
+		}
+
+		System.out.print("解答欄 :");
+		int n = sc.nextInt();
+
+
+		if(n == 1 || n == 2 || n == 4){
+			ans = 0;
+			System.out.println("不正解！ 正解は3の「" + s[2] + "」");
+		}
+
+		else if(n == 3){
+			ans = 20;
+			System.out.println("正解！ 正解は3の「" + s[2] + "」");
+		}
+
+		return ans;
 	}
 
 	/**
