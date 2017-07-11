@@ -112,9 +112,26 @@ public class Main {
 	 */
 	public static int toi4() {
 		// 回答番号
-		int answer = 0;
+		Scanner sc = new Scanner(System.in);
+		int ans = 0;
+		String[] s = {"ハブ","ブリッジ","リピータ","ルータ"};
+		int  t;
 
-		return answer;
+		System.out.println("複数のLAN同士を，ネットワーク層で相互に接続するのに使用する装置はどれか。");
+		for(int i = 0 ; i < s.length ; i++){
+			  System.out.println((i + 1) + ":" + s[i]);
+		}
+		System.out.print("番号を入力して下さい -> ");
+		t = sc.nextInt();
+		if(t == 4){
+			  System.out.println("正解です。");
+			  ans = 1;
+			}
+			else {
+			  System.out.println("不正解です。");
+			  ans = 0;
+			}
+		return ans;
 	}
 
 	/**
